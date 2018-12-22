@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Desafio</ion-title>
+       <ion-buttons start>
+          <button ion-button icon-only (click)="editFirstPhoto()">
+            <ion-icon name="md-copy"></ion-icon>
+          </button>
+       </ion-buttons>
+
+       <ion-buttons start>
+          <button ion-button icon-only (click)="deleteDateOnTheScreen()">
+            <ion-icon name="md-trash"></ion-icon>
+          </button>
+        </ion-buttons> 
+
+        <ion-buttons end>
+          <button ion-button icon-only (click)="onTakeYourPositionInGlobe()">
+            <ion-icon name="md-map"></ion-icon>
+        </button>
+          
+        </ion-buttons>
+        
+        <ion-buttons end>
+            <button ion-button icon-only (click)="onTakePicture()">
+                <ion-icon name="md-camera"></ion-icon>
+            </button>
+        </ion-buttons> 
+
+        
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  
+  <img width=100 height=100 src={{image}} />
+  <div text-center>
+      <div>
+          <button ion-button icon-right (click)="getPhoto()">
+              Obter do  Banco <ion-icon name="get"></ion-icon>
+          </button>
+      </div>
+      <p>Lat: {{ lat }}</p>
+      <p>Long: {{ log }} </p>
+  </div>
+
+</ion-content>
